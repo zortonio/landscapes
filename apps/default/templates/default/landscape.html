@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Landscape</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'default/css/landscape.css' %}">
+  </head>
+  <body>
+    {% if request.session.landscape == 'snow' %}
+      <img src="../../static/default/images/snow.jpg" alt="Snowy Landscape">
+    {% elif request.session.landscape == 'desert' %}
+      <img src="../../static/default/images/desert.jpg" alt="Desert Landscape">
+    {% elif request.session.landscape == 'forest' %}
+      <img src="../../static/default/images/forest.jpg" alt="Forest Landscape">
+    {% elif request.session.landscape == 'vineyard' %}
+      <img src="../../static/default/images/vineyard.jpg" alt="Vineyard Landscape">
+    {% elif request.session.landscape == 'tropical' %}
+      <img src="../../static/default/images/tropical.jpg" alt="Tropical Landscape">
+    {% endif %}
+  </body>
+</html>
